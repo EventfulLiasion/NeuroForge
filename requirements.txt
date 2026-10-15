@@ -1,0 +1,38 @@
+# core — CPU only, free tier (Python 3.13 compatible, binary wheels only)
+fastapi>=0.115,<0.117
+uvicorn[standard]>=0.30,<0.33
+pydantic>=2.9,<3
+pydantic-settings>=2.5,<3
+python-dotenv>=1.0
+pyyaml>=6.0
+httpx>=0.27
+# ml
+scikit-learn>=1.5.2
+pandas>=2.2
+numpy>=1.26,<3
+scipy>=1.14
+joblib>=1.4
+optuna>=3.6
+mlflow>=2.16,<3
+shap>=0.46
+datasets>=3.0
+# rag / nlp — all run on CPU
+--extra-index-url https://download.pytorch.org/whl/cpu
+sentence-transformers>=3.1
+faiss-cpu>=1.9
+rank-bm25>=0.2.2
+transformers>=4.44
+torch>=2.4
+# llm free-tier clients (all optional, offline fallback works)
+groq>=0.11
+google-generativeai>=0.8
+openai>=1.47
+# JD: LangChain + agents
+langchain-core>=0.3
+langchain>=0.3
+langchain-community>=0.3
+# ui + ops
+streamlit>=1.38
+pytest>=8.3
+pytest-asyncio>=0.24
+ruff>=0.6

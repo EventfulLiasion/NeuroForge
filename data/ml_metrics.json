@@ -1,0 +1,6 @@
+{
+  "accuracy": 0.9975,
+  "f1_weighted": 0.9974923264756559,
+  "roc_auc_ovr": 1.0,
+  "best_model": "rf-tuned {'max_depth': 10, 'n_estimators': 148}"
+}

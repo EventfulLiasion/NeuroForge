@@ -1,0 +1,12 @@
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+.env
+venv/
+.venv/
+mlruns/
+data/*.index
+data/*.pkl
+data/*.csv
+data/*.jsonl
+!data/.gitkeep

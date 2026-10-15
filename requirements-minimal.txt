@@ -1,0 +1,10 @@
+# Minimal install — gets data + ML training running in <2 min, no torch/faiss
+pandas>=2.2
+scikit-learn>=1.5.2
+numpy>=1.26,<3
+scipy>=1.14
+joblib>=1.4
+pyyaml>=6.0
+datasets>=3.0
+fastapi>=0.115,<0.117
+uvicorn>=0.30

@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: neuroforge-api}
+spec:
+  replicas: 2
+  selector: {matchLabels: {app: neuroforge-api}}
+  template:
+    metadata: {labels: {app: neuroforge-api}}
+    spec:
+      containers:
+      - {name: api, image: neuroforge:latest, ports: [{containerPort: 8000}],
+         readinessProbe: {httpGet: {path: /health, port: 8000}, periodSeconds: 10}}
+---
+apiVersion: v1
+kind: Service
+metadata: {name: neuroforge-api}
+spec: {selector: {app: neuroforge-api}, ports: [{port: 80, targetPort: 8000}], type: LoadBalancer}
